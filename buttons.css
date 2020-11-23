@@ -1,0 +1,33 @@
+*
+{
+	margin: 0;
+	padding: 0;
+}
+
+#core
+{
+	margin: 0 auto;
+	width: 500px;
+	height: 500px;
+	border: 2px solid grey;
+	background-image: url(images/bg0.jpg);
+	background-size: 85%;
+	background-repeat: no-repeat;
+	position: relative;
+}
+
+button
+{
+	margin-left: 15px;
+	margin-top: 5px;
+	padding: 3px 25px;
+	background-color: #4CAF50;
+	color: white;
+}
+
+img
+{
+	position: absolute;
+	top: 340px;
+	left: 340px;
+}
