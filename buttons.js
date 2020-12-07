@@ -9,23 +9,49 @@ var button1Clicks = 0;
 var button2Clicks = 0;
 var button3Clicks = 0;
 
+var lastpress;
+
 button1.addEventListener("click", function(){
-	button1Clicks++;
-	image.src = "images/1.jpg";
-	core.style.backgroundImage = "url('images/bg1.jpg')";
-	button1.innerHTML = button1Clicks;
+	if(lastpress != 1)
+	{
+		button1Clicks++;
+		image.src = "images/1.jpg";
+		core.style.backgroundImage = "url('images/bg1.jpg')";
+		button1.innerHTML = button1Clicks;
+		lastpress = 1;
+		button1.style.backgroundColor = "red";
+		button2.style.backgroundColor = "#4CAF50";
+		button3.style.backgroundColor = "#4CAF50";
+	}
+	
 });
 
 button2.addEventListener("click", function(){
-	button2Clicks++;
-	image.src = "images/2.jpg";
-	core.style.backgroundImage = "url('images/bg2.jpg')";
-	button2.innerHTML = button2Clicks;
+	if(lastpress != 2)
+	{
+		button2Clicks++;
+		image.src = "images/2.jpg";
+		core.style.backgroundImage = "url('images/bg2.jpg')";
+		button2.innerHTML = button2Clicks;
+		lastpress = 2;	
+		button1.style.backgroundColor = "#4CAF50";
+		button2.style.backgroundColor = "red";
+		button3.style.backgroundColor = "#4CAF50";	
+	}
+
 });
 
 button3.addEventListener("click", function(){
-	button3Clicks++;
-	image.src = "images/3.jpg";
-	core.style.backgroundImage = "url('images/bg3.jpg')";
-	button3.innerHTML = button3Clicks;
+	if(lastpress != 3)
+	{
+		button3Clicks++;
+		image.src = "images/3.jpg";
+		core.style.backgroundImage = "url('images/bg3.jpg')";
+		button3.innerHTML = button3Clicks;	
+		lastpress = 3;	
+		button1.style.backgroundColor = "#4CAF50";
+		button2.style.backgroundColor = "#4CAF50";
+		button3.style.backgroundColor = "red";
+	}
+
 });
